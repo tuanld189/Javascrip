@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #082c6c;
+    color: #fff;
+}
+.game{
+    max-width: 1408px;
+    margin: auto;
+}
+
+
+.playerS, .computerS, .move, .result {
+    display: block;
+    padding: 0 100px;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0 ;
+}
+
+/* .playgame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} */
+
+.movesleft {
+    text-align: center;
+    font-size: 20px;
+}
+
+.p-count,.c-count{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+.rock, .paper, .scissor{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: rgb(157, 158, 157);
+    outline: none;
+    border-color: rgb(119, 121, 119);
+    border: none;
+    cursor: pointer;
+}
+.move{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ 
+.result{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 612px)
+{ 
+    .title{
+        text-align: center;
+    }
+    .score{
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+    .options{
+        width: 100vw;
+    }
+}

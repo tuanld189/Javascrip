@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="name">
+        <div id="div1" class="class1">Day la div 1</div>
+        <div id="div2" class="class2">Day la div 2</div>
+        <div id="div3" class="class3">Day la div 3</div>
+
+    </div> -->
+    <div id="divanh"></div>
+    <button id="clickanh">Anh bong da</button>
+    <button onclick="hienthianh('game')">Anh game</button>
+    <button onclick="hienthianh('bongda')">Anh bong da</button>
+
+    <script>
+        function hienthianh(x){
+            var divanh = document.getElementById("divanh");
+            if(x=='game'){
+                divanh.innerHTML = "<img src='game.jpg' alt='' width='300px'>";
+            }
+            else{
+                divanh.innerHTML = "<img src='bongda.jpg' alt='' width='300px'>";
+            }
+            // divanh.innerHTML = "<img src='game.jpg' alt='' width='600px'>";
+            // document.write("<img src='game.jpg' alt='' width='600px'");
+
+        }
+        document.getElementById("clickanh").onclick = hienthianh('bongda');
+    </script>
+    <!-- <a href="http://caodang.fpt.edu.vn" id="link">Link</a>
+    <script>
+        var nodelink = document.getElementById("link");
+        alert(nodelink.href);
+    </script> -->
+
+    <!-- <div id="hoa">
+        <p>Hoa Hong</p>
+        <p>Hoa Dao</p>
+        <p id="hoalan">Hoa Lan</p>
+        <script>
+            //Truy xuat gia tri node: nodeValue
+            var divhoa = document.getElementById("hoa");
+            var pHoaHong = divhoa.firstChild;
+            console.log(pHoaHong)
+            alert(pHoaHong.nextSibling.childNodes[0].nodeValue)
+            //Tao node: createElement
+            var newElement = document.createElement("p")
+            //Them node vao element: appendChild
+            divhoa.appendChild(newElement)
+            //Them textnode: CreateTextNode
+            var textnode = document.createTextNode("Hoa Mai");
+            newElement.appendChild(textnode);
+            //Xoa node: removeChild
+            var hoalan = document.getElementById("hoalan")
+            divhoa.removeChild(hoalan);
+        </script>
+    </div> -->
+  <script src="js/buoi5.js"></script>
+
+</body>
+</html>

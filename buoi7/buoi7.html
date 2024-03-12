@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Truy xuất form: Input Field-->
+    <!-- <form id="myform">
+        <input type="text" name="txtho" placeholder="Họ" value="">
+        <input type="text" name="txtten" placeholder="Tên">
+        <input type="button" value="Xác nhận" onclick="guiThongTin();">
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function guiThongTin(){
+            var inputs = document.getElementById("myform").elements;
+            console.log(inputs);
+            //var inputByIndex = inputs[0];
+            //var inputByName = inputs["txtten"];
+            //var inputByName = inputs.txtten;
+            document.getElementById("message").innerHTML = "Xin chào " + inputs.txtho.value + " " +  inputs.txtten.value;
+        }
+    </script> -->
+
+    <!-- Truy xuất form: Input Checkbox-->
+    <!-- <p>Chọn sở thích của bạn: </p>
+    <form id="myform">
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich1" value="Đọc sách">
+            <label for="sothich1">Đọc sách</label>
+        </div>
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich2" value="Đá bóng">
+            <label for="sothich2">Đá bóng</label>
+        </div>
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich3" value="Chơi game">
+            <label for="sothich3">Chơi game</label>
+        </div>
+        <br>
+        <div><input type="button" value="Xác nhận" onclick="guiThongTin();"></div>
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function guiThongTin(){
+            var checkboxs = document.getElementsByName("txtsothich");
+            var str = "";
+            console.log(checkboxs);
+            for(i=0;i<checkboxs.length;i++){
+                //str += checkboxs[i].value + " ";
+                if(checkboxs[i].checked == true){
+                    str += checkboxs[i].value + " ";
+                }
+            }
+            document.getElementById("message").innerHTML = str;
+        }
+    </script> -->
+
+    <!-- Thuộc tính event target-->
+    <!-- <button onclick="checkClick();">Click</button>
+    <script>
+        function checkClick(){
+            console.log(event.target);
+            console.dir(event.target);
+        }
+    </script> -->
+
+    <!-- Sử dụng evetn target -->
+    <!-- <form id="myform">
+        <input type="text" name="txtho" placeholder="Họ">
+        <input type="text" name="txtten" placeholder="Tên">
+        <input type="button" value="Xác nhận" onclick="guiThongTin();">
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function guiThongTin(){
+            var inputs = event.target.parentElement; // var inputs = document.getElementById("myform").elements;
+            console.log(inputs);
+            console.dir(inputs);
+            //document.getElementById("message").innerHTML = "Xin chào " + inputs[0].value + " " +  inputs["txtten"].value;
+            document.getElementById("message").innerHTML = "Xin chào " + inputs.txtho.value + " " +  inputs.txtten.value;
+        }
+    </script> -->
+
+    <p>Chọn sở thích của bạn: </p>
+    <form id="myform">
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich1" value="Đọc sách">
+            <label for="sothich1">Đọc sách</label>
+        </div>
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich2" value="Đá bóng">
+            <label for="sothich2">Đá bóng</label>
+        </div>
+        <div>
+            <input type="checkbox" name="txtsothich" id="sothich3" value="Chơi game">
+            <label for="sothich3">Chơi game</label>
+        </div>
+        <br>
+        <input type="button" value="Xác nhận" onclick="guiThongTin();">
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function guiThongTin(){
+            var inputs = event.target.parentElement; // var inputs = document.getElementById("myform").elements;
+            var str = "";
+            console.log(inputs);
+            console.dir(inputs);
+            for(i=0;i<inputs.txtsothich.length;i++){
+                //str += inputs.txtsothich[i].value + " ";
+                if(inputs.txtsothich[i].checked == true){
+                    str += inputs.txtsothich[i].value + " ";
+                }
+            }
+            document.getElementById("message").innerHTML = str;
+        }
+    </script>
+
+    <!-- Event onchange, onblur-->
+        <!-- <form id="myform">
+            <input type="text" name="txtho" placeholder="Họ" onchange="testChangeBlur()">
+            <input type="text" name="txtten" placeholder="Tên" onblur="testChangeBlur()">
+            <input type="button" value="Xác nhận" onclick="guiThongTin();">
+        </form>
+        <br>
+        <div id="message"></div>
+        <script>
+            function testChangeBlur(){
+                var inputs = event.target;
+                if(inputs == "txtho"){
+                    message("Input 'txtho' đã thay đổi giá trị: " + inputs.value);
+                }else{
+                    message("Input 'txtten' đã thay đổi giá trị: " + inputs.value); 
+                }
+            }
+            function guiThongTin(){
+                var inputs = event.target.parentElement;
+                message("Xin chào " + inputs.txtho.value + " " +  inputs.txtten.value);
+            }
+            function message(m){
+                document.getElementById("message").innerHTML = m;
+            }
+        </script> --> -->
+<!--  <form id="myform">
+        <input type="text" name="txtho" placeholder="Họ" value="Nguyễn" onkeydown="testKeyDown()" onpaste="return false">
+        <input type="text" name="txtdem" placeholder="Đệm" value="Xuân" onkeyup="testKeyUp()">
+        <input type="text" name="txtten" placeholder="Tên" value="Huy" onkeypress="testKeyPress()">
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function testKeyDown(){
+            var inputs = event.target;
+            console.log(inputs);
+            message("KeyDown: " + inputs.value);
+        }
+        function testKeyUp(){
+            var inputs = event.target;
+            message("KeyUp: " + inputs.value);
+        }
+        function testKeyPress(){
+            var inputs = event.target;
+            message("KeyPress: " + inputs.value);
+        }
+        function message(m){
+            document.getElementById("message").innerHTML = m;
+        }
+    </script> -->
+
+    <!-- Onsubmit -->
+    <!-- <form action="ketqua.html" method="get" id="myform" onsubmit="return valForm();">
+        <input type="text" name="txtho" placeholder="Họ">
+        <input type="text" name="txtten" placeholder="Tên">
+        <input type="submit" value="Xác nhận" >
+    </form>
+    <br>
+    <div id="message"></div>
+    <script>
+        function valForm(){
+            var inputs = event.target.children;
+            if(inputs.txtho.value == ""){
+                alert("Bạn chưa điền Họ, vui lòng nhập lại");
+                inputs.txtho.focus();
+                return false;
+            }
+            if(inputs.txtten.value == ""){
+                alert("Bạn chưa điền Tên, vui lòng nhập lại");
+                inputs.txtten.focus();
+                return false;
+            }
+            //return false;
+        }
+    </script> -->
+
+    <!-- Drag và Drop --> 
+    <!-- <style>
+        .box{width: 100px; height: 100px; border:1px solid #000; background-color: #fff;}
+    </style>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">1
+        <div id="dragme" draggable="true" ondragstart="dStart()" draggable="true">Drag Me Please</div>
+    </div>
+    <div class="box" ondrop="dDrop()"  ondragover="nDrop()">2</div>
+    <script>
+        var holderItem;
+        function dStart(){
+            holderItem = event.target;
+        }
+        function nDrop(){
+            event.preventDefault();
+        }
+        function dDrop(){
+            event.preventDefault();
+            if(event.target.className == "box"){
+                event.target.appendChild(holderItem);
+            }
+        }
+    </script> 
+
+     <script>
+        function test(a,b,c){
+            console.log(arguments);
+            console.log("Cách 1: Gọi tham số 1: ", a);
+            console.log("Cách 2: Gọi tham số 1: ", arguments[0]);
+            // console.log("Tham số 2: ", b, arguments[1]);
+            // console.log("Tham số 3: ", c, arguments[2]);
+        }
+        test("js1","js2","js3");
+    </script> -->
+
+    <!-- Javascript Hoisting -->
+    <!-- <div id="message"></div>
+    <script>
+        var x = 5;
+        elm = document.getElementById("message").innerHTML = "x = " + x + "<br>y = " + y;
+        var y = 6;
+        // var x = 5;
+        // var y;
+        // document.getElementById("message").innerHTML = "x = " + x + "<br>y = " + y;
+        // y = 6;
+
+    </script> -->
+
+    <!-- stric mode -->
+    <!-- <script>
+        "use strict";
+        x = 10;
+        alert(x);
+    </script> -->
+</body>
+</html>
